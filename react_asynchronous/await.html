@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Await and Async Function</title>
+  </head>
+  <body>
+    <h1>This is Await Function</h1>
+    <script>
+      async function fn() {
+        let promise = new Promise((resolve, reject) => {
+          setTimeout(() => resolve("Done!"), 1000);
+        });
+        let res = await promise;
+        console.log(res, "\n This is Await and Async Function Example");
+      }
+      fn();
+    </script>
+  </body>
+</html>

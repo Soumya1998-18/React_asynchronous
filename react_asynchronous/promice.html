@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promice Function</title>
+  </head>
+  <body>
+    <h1>This is a Promice Function!!</h1>
+    <script>
+      //   const promiceObj1 = new Promise((resolve, reject) => {
+      //     let num = 10
+      //     resolve(num)
+      //   }).then(
+      //     (value)=>{
+      //     console.log(value);
+      //     return value + 10
+      //   }
+      //   ).then(
+      //     (value) => {console.log(value) }
+      //   )
+
+      const promiceObj = new Promise((resolve, reject) => {
+        let req = false;
+        if (req == true) {
+          resolve("Request Success");
+        } else {
+          reject("Request Failed");
+        }
+      })
+        .then((value) => {
+          console.log(value);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => {
+          console.log("Cleaned up");
+        });
+    </script>
+  </body>
+</html>
